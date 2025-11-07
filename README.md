@@ -84,7 +84,183 @@ Fitur: validasi form, manipulasi DOM, dan pop-up modal.
     <script src="js/script.js"></script>
     </body>
     </html>
+    
+# css/style.css
 
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                .login-container {
+                    width: 320px;
+                    background: #fff;
+                    margin: 100px auto;
+                    padding: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                }
+                
+                h2 {
+                    text-align: center;
+                    color: #333;
+                }
+                
+                label {
+                    display: block;
+                    margin-top: 10px;
+                }
+                
+                input {
+                    width: 100%;
+                    padding: 8px;
+                    margin-top: 5px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                }
+                
+                button {
+                    width: 100%;
+                    padding: 10px;
+                    background-color: #2c7be5;
+                    border: none;
+                    color: white;
+                    font-weight: bold;
+                    margin-top: 15px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                
+                button:hover {
+                    background-color: #1a5fd1;
+                }
+                
+                .extra-links {
+                    text-align: center;
+                    margin-top: 15px;
+                }
+                
+                .extra-links button {
+                    width: auto;
+                    background: none;
+                    color: #2c7be5;
+                    border: none;
+                    cursor: pointer;
+                    margin: 5px;
+                }
+                
+                .extra-links button:hover {
+                    text-decoration: underline;
+                }
+                
+                /* Modal Style */
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    left: 0; top: 0;
+                    width: 100%; height: 100%;
+                    background-color: rgba(0,0,0,0.4);
+                }
+                
+                .modal-content {
+                    background: #fff;
+                    margin: 15% auto;
+                    padding: 20px;
+                    border-radius: 10px;
+                    width: 300px;
+                    text-align: center;
+                }
+                
+                #closeModal {
+                    float: right;
+                    cursor: pointer;
+                    font-size: 20px;
+                    color: #999;
+                }
+                #closeModal:hover {
+                    color: black;
+                }
+                
+# js/script.js
+
+            // Dummy data login
+            const dataPengguna = [
+                {
+                    id: 1,
+                    nama: "Rina Wulandari",
+                    email: "rina@gmail.com",
+                    password: "rina123",
+                    role: "User",
+                },
+                {
+                    id: 2,
+                    nama: "Agus Pranoto",
+                    email: "agus@gmail.com",
+                    password: "agus123",
+                    role: "User",
+                },
+                {
+                    id: 3,
+                    nama: "Siti Marlina",
+                    email: "siti@gmail.com",
+                    password: "siti123",
+                    role: "Admin",
+                }
+            ];
+            
+            // Login validation
+            document.getElementById("loginForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+            
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+            
+                const user = dataPengguna.find(u => u.email === email && u.password === password);
+            
+                if (user) {
+                    alert("Login berhasil!");
+            
+                    // Simpan data pengguna yang login (opsional)
+                    localStorage.setItem("userLogin", JSON.stringify(user));
+            
+                    // Kalau admin, arahkan ke halaman admin
+                    if (user.role === "Admin") {
+                        window.location.href = "admin-dashboard.html";
+                    } else {
+                        window.location.href = "dashboard.html";
+                    }
+            
+                } else {
+                    alert("Email/password yang anda masukkan salah!");
+                }
+            });
+            
+            // Modal handling
+            const modal = document.getElementById("modalBox");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalText = document.getElementById("modalText");
+            const closeModal = document.getElementById("closeModal");
+            
+            document.getElementById("btnLupa").addEventListener("click", () => {
+                modal.style.display = "block";
+                modalTitle.textContent = "Lupa Password";
+                modalText.textContent = "Silakan hubungi admin untuk reset password anda.";
+            });
+            
+            document.getElementById("btnDaftar").addEventListener("click", () => {
+                modal.style.display = "block";
+                modalTitle.textContent = "Daftar Akun Baru";
+                modalText.textContent = "Fitur pendaftaran sedang dalam pengembangan.";
+            });
+            
+            closeModal.addEventListener("click", () => modal.style.display = "none");
+            window.addEventListener("click", (e) => {
+                if (e.target == modal) modal.style.display = "none";
+            });
+                        
  # 2. dashboard.html
     
  Menu navigasi ke:
