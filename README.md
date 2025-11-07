@@ -82,8 +82,8 @@ Fitur: validasi form, manipulasi DOM, dan pop-up modal.
             </div>
 
     <script src="js/script.js"></script>
-</body>
-</html>
+    </body>
+    </html>
 
  # 2. dashboard.html
     
