@@ -45,38 +45,54 @@ Fitur: validasi form, manipulasi DOM, dan pop-up modal.
  2. dashboard.html
     
  Menu navigasi ke:
+ 
  Stok/Katalog
+ 
  Tracking Pengiriman
+ 
  Laporan Pemesanan
+ 
  History Transaksi
+ 
 Menampilkan ucapan/greeting otomatis sesuai waktu lokal:
 “Selamat Pagi”, “Selamat Siang”, “Selamat Sore”
+
 > JS file: main.js
  
  3. stok.html
 
 Menampilkan data dari data.js:
+
 const dataKatalogBuku = [
+
   { id: 1, judul: "Pemrograman Web", stok: 10, harga: 75000 },
   { id: 2, judul: "Basis Data", stok: 5, harga: 85000 },
 ];
+
 Bisa menambahkan data buku baru dengan manipulasi DOM (append row ke tabel).
 
 
  4. checkout.html
 
 Menampilkan data pemesanan (buku yang dipilih)
+
 Form data pemesan & pembayaran
+
 Bisa ubah jumlah buku dan total harga otomatis.
 
 
  5. tracking.html
 
 Input: Nomor Delivery Order
+
 Tombol Cari
+
 Menampilkan:
+
 Nama Pemesan
+
 Status Pengiriman (pakai progress bar atau warna)
+
 Detail ekspedisi, tanggal kirim, jenis paket, total pembayaran
 
 
