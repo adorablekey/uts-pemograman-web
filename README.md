@@ -44,7 +44,46 @@ Fitur: validasi form, manipulasi DOM, dan pop-up modal.
 
 <img width="1920" height="1200" alt="Screenshot 2025-11-07 160857" src="https://github.com/user-attachments/assets/46f79ff5-7e78-4998-b5ba-d7d01e7d8e09" />
 
+# login.html
+        <!DOCTYPE html>
+        <html lang="id">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Login - Toko Buku Online</title>
+            <link rel="stylesheet" href="css/style.css">
+        </head>
+        <body>
+            <div class="login-container">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Masukkan email" required>
+        
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Masukkan password" required>
+        
+                    <button type="submit">Login</button>
+                </form>
+        
+                <div class="extra-links">
+                    <button id="btnLupa">Lupa Password</button>
+                    <button id="btnDaftar">Daftar</button>
+                </div>
+            </div>
+        
+            <!-- Modal Box -->
+            <div id="modalBox" class="modal">
+                <div class="modal-content">
+                    <span id="closeModal">&times;</span>
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalText"></p>
+                </div>
+            </div>
 
+    <script src="js/script.js"></script>
+</body>
+</html>
 
  # 2. dashboard.html
     
