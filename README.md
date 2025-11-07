@@ -26,7 +26,7 @@
         └── icons/
 
 
-1. login.html
+# 1. login.html
 
 Input: email, password
 
@@ -41,8 +41,11 @@ Muncul dalam modal box (pop-up)
 > JS file: login.js
 Fitur: validasi form, manipulasi DOM, dan pop-up modal.
 
+<img width="1920" height="1200" alt="Screenshot 2025-11-07 160857" src="https://github.com/user-attachments/assets/46f79ff5-7e78-4998-b5ba-d7d01e7d8e09" />
 
- 2. dashboard.html
+
+
+ # 2. dashboard.html
     
  Menu navigasi ke:
  
@@ -58,8 +61,11 @@ Menampilkan ucapan/greeting otomatis sesuai waktu lokal:
 “Selamat Pagi”, “Selamat Siang”, “Selamat Sore”
 
 > JS file: main.js
- 
- 3. stok.html
+
+<img width="1920" height="1200" alt="Screenshot 2025-11-07 161901" src="https://github.com/user-attachments/assets/3e829b10-cfb0-4f24-ad14-e05a3cdf1164" />
+
+
+ # 3. stok.html
 
 Menampilkan data dari data.js:
 
@@ -71,8 +77,10 @@ const dataKatalogBuku = [
 
 Bisa menambahkan data buku baru dengan manipulasi DOM (append row ke tabel).
 
+<img width="1920" height="1200" alt="Screenshot 2025-11-07 161929" src="https://github.com/user-attachments/assets/9188b645-15f3-421d-b291-c7c7af7bedcd" />
 
- 4. checkout.html
+
+ # 4. checkout.html
 
 Menampilkan data pemesanan (buku yang dipilih)
 
@@ -80,8 +88,10 @@ Form data pemesan & pembayaran
 
 Bisa ubah jumlah buku dan total harga otomatis.
 
+<img width="1920" height="1200" alt="Screenshot 2025-11-07 161833" src="https://github.com/user-attachments/assets/dd04c42b-1f3b-4d3c-a8a1-96c8108b9f50" />
 
- 5. tracking.html
+
+ # 5. tracking.html
 
 Input: Nomor Delivery Order
 
@@ -94,6 +104,9 @@ Nama Pemesan
 Status Pengiriman (pakai progress bar atau warna)
 
 Detail ekspedisi, tanggal kirim, jenis paket, total pembayaran
+
+<img width="1920" height="1200" alt="Screenshot 2025-11-07 161952" src="https://github.com/user-attachments/assets/c47b0980-e70c-4d30-ab7e-8474866fb101" />
+
 
 
 
