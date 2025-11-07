@@ -29,10 +29,15 @@
 1. login.html
 
 Input: email, password
+
 Tombol Login
+
 Jika salah → alert("Email/Password salah")
+
 Tombol Lupa Password dan Daftar
+
 Muncul dalam modal box (pop-up)
+
 > JS file: login.js
 Fitur: validasi form, manipulasi DOM, dan pop-up modal.
 
